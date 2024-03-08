@@ -1,7 +1,17 @@
 # 빌드 순서
 ## 
+    1. 제공된 도커 이미지와 LiDAR2INS 소스코들 이용해 빌드 시도 할 것.
+    2. 1번 과정에서 실패 시, opencv-2.4.13, boost-1.72.0, eigen-3.3.7, pcl-1.9.1, Pangolin, jsoncpp 라이브러리를 설치.
+    3. opencv-2.4.13 소스코드는 따로 제공. 해당 소스코드를 사용하여 빌드하는 것을 추천,
+    4. opencv-24.13 버전을 새로 다운로드 받을 시, opencv_20_04.sh파일 안에 설명된 에러 대처법에 따라 빌드 시도할 것.
+    5. pcl 라이브러리의 경우 빌드 시간이 4시간 정도 소요됨. 
+    6. 0번~8번과정을 따라갈 것.
+    7. 이 밖의 에러 시 ccww2339@naver.com으로 문의.
+
+## 
     https://hub.docker.com/repository/docker/ccww2339/lidar2ins_20_04_v2/general
     도커 이미지(ccww2339/lidar2ins_20_04_v2) 제공 시, 9번으로 
+    제공된 이미지에서 빌드 실패 시, prerequisities폴더에 제공된 압축 파일 사용. 
 ## 0. workspace 설정.
     cd ${your_ws}/src
 ## 1. opencv-2.4.13

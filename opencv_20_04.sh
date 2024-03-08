@@ -29,7 +29,7 @@ add-apt-repository 'deb http://security.ubuntu.com/ubuntu xenial-security main'
 apt update
 apt-get -qq install libopencv-dev build-essential checkinstall cmake pkg-config yasm libjpeg-dev libjasper-dev libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev libxine2 libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libv4l-dev python3-capstone python3-numpy libtbb-dev libgtk2.0-dev libmp3lame-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev x264 v4l-utils
  
-# download opencv-2.4.13
+# download opencv-2.4.13 <- 제공된 opencv.zip 파일로 빌드시 에러가 날 경우 새로 다운로드. 
 # wget http://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/2.4.11/opencv-2.4.13.zip
 # unzip opencv-2.4.13.zip
 cd opencv-2.4.13
@@ -43,7 +43,7 @@ make install
  
 # ignore libdc1394 error http://stackoverflow.com/questions/12689304/ctypes-error-libdc1394-error-failed-to-initialize-libdc1394
  
-# build 시 에러
+# 새로 opencv 소스코드를 다운 받을 경우, build 시 에러 발생. 
 # https://makejarvis.tistory.com/43 참조.
 
 #python
